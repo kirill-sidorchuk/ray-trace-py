@@ -59,7 +59,7 @@ def main():
                 canvas[int(y), int(x)] = [color, color, color]
 
         # show canvas with opencv
-        old_canvas = (canvas + old_canvas * 2) // 3
+        old_canvas = (canvas + old_canvas) // 2
         cv2.imshow('Point cloud', old_canvas.astype(np.uint8))
         k = cv2.waitKey(1)
         if k == 27:
